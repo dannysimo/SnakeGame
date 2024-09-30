@@ -1,0 +1,7 @@
+*.o
+*.exe
+.DS_Store
+Thumbs.db
+.vscode/
+*.log
+*~
