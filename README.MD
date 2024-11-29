@@ -1,21 +1,24 @@
-# Modificări efectuate în cadrul ramurii lab05
+# Snake Game - Schimbări în Cod
 
-În această ramură am realizat următoarele schimbări conform cerințelor specificate:
+În această versiune a proiectului Snake, am realizat următoarele modificări importante în cod:
 
-## 1. Crearea și utilizarea bibliotecilor
+## 1. Organizarea codului
+Am organizat proiectul în directoare pentru o structură mai clară:
+- `src/`: Conține fișierele sursă `.cpp` pentru logica jocului.
+- `include/`: Conține fișierele de header `.hpp` pentru declarațiile claselor și funcțiilor.
+  
+## 2. Implementarea claselor
+Am adăugat fișiere pentru gestionarea elementelor din joc:
+- **Apple (`apple.hpp` și `apple.cpp`)**: Clasa care gestionează poziția și comportamentul mărului din joc.
+- **Board (`board.hpp` și `board.cpp`)**: Clasa care se ocupă de tabla de joc, inclusiv dimensiunile și desenarea acesteia.
+- **Point (`point.hpp` și `point.cpp`)**: Structura pentru a reprezenta coordonatele (x, y) ale elementelor pe tabla de joc.
+- **Snake (`snake.hpp` și `snake.cpp`)**: Clasa care definește comportamentul șarpelui, inclusiv mișcarea și creșterea acestuia.
 
-Am refăcut structura codului pentru a include implementarea și utilizarea bibliotecilor statice sau dinamice în cadrul aplicației Snake. Aceste biblioteci sunt folosite pentru a organiza mai eficient codul și pentru a îmbunătăți modularitatea acestuia. Fiecare clasă din proiect (de exemplu, `Apple`, `Board`, `Snake`, etc.) a fost transformată într-o bibliotecă separată, iar fișierele relevante `.cpp` și `.hpp` au fost reorganizate în directoare specifice.
-
-## 2. Integrarea fișierelor de antet și sursă
-
-Fișierele de antet (header files, `.hpp`) și fișierele sursă (source files, `.cpp`) au fost plasate în directoarele `include/` și `src/` pentru a respecta o structură standard a proiectului. Aceasta permite gestionarea mai eficientă a fișierelor și utilizarea lor în diferite module.
-
-## 3. Actualizarea Makefile-ului
-
-Am actualizat fișierul `Makefile` pentru a include noile biblioteci și fișierele sursă. Makefile-ul este acum configurat pentru a construi aplicația folosind aceste biblioteci, asigurându-se că toate fișierele sunt corect legate și compilate într-un singur executabil.
-
-## 4. Modificarea structurii directorului
-
-Proiectul a fost reorganizat astfel încât fișierele sursă și antet să fie clar separate, iar fișierele obiect și executabile să fie plasate în directoare dedicate (`obj/` și `bin/`), care sunt create automat la rularea procesului de construcție.
-
-Aceste schimbări au fost făcute pentru a respecta cerințele de structurare a unui proiect C++ modern și pentru a facilita extinderea și întreținerea ulterioară a aplicației.
+## 3. Makefile
+Am modificat Makefile-ul pentru a compila corect fișierele sursă și pentru a lega bibliotecile necesare. Makefile-ul include acum:
+- Construirea fișierelor obiect din fișierele sursă.
+- Crearea bibliotecilor statice și dinamice.
+- Generarea executabilului `app`.
+  
+## 4. Curățare fișiere temporare
+Am adăugat comanda `make clean`, care șterge fișierele obiect, bibliotecile și executabilul pentru o recompilare complet curată.
