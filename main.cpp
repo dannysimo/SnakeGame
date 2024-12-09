@@ -1,3 +1,10 @@
+/**
+ * @file main.cpp
+ * @brief Punctul de intrare pentru jocul SnakeGame.
+ * @author 
+ * @date 2024
+ */
+
 #include <iostream>
 #include "board.hpp"
 #include "snake.hpp"
@@ -10,8 +17,8 @@ int main() {
 
     apple.relocate(board.width, board.height);
 
-    std::cout << "Snake head: " << snake.body[0] << std::endl;
-    std::cout << "Apple position: " << apple.position << std::endl;
+    std::cout << "Poziția capului șarpelui: " << snake.body[0] << std::endl;
+    std::cout << "Poziția mărului: " << apple.position << std::endl;
 
     return 0;
 }
