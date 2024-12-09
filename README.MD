@@ -25,6 +25,6 @@ SnakeGame este un joc clasic în care utilizatorul controlează un șarpe pentru
 ## Dependențe
 
 Pentru a compila și rula proiectul, sunt necesare:
-- Compilator **g++** (versiunea 7.0 sau mai recentă).
+- Compilator **g++**.
 - Utilitarul **Make** pentru rularea automatizată a comenzilor.
 - **Doxygen** pentru generarea documentației.
